@@ -9,7 +9,7 @@ public class Stopwatch {
         /*
         JFrame and JLabel for creating countdown display objects
          */
-        JFrame jframe= new JFrame();
+        JFrame jframe = new JFrame();
         JLabel jlabel = new JLabel();
         jframe.setLayout(new FlowLayout());
         jframe.setBounds(250, 250, 500, 250);
@@ -25,6 +25,7 @@ public class Stopwatch {
          */
         timer.scheduleAtFixedRate(new TimerTask() {
             int time = 45;
+
             /*
             time in seconds to count down from, need to see how this can be passed as parameter
              */
