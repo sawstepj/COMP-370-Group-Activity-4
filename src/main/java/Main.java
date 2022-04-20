@@ -8,10 +8,13 @@ public class Main {
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Input the number of seconds: ");
         int input = keyboard.nextInt();
+        runTimer(input);
+    }
 
+    public static void runTimer(int seconds) {
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
-            int time = input;
+            int time = seconds;
 
             public void run() {
                 System.out.println(time);
