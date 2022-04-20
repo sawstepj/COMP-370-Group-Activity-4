@@ -15,6 +15,7 @@ jobs:
       uses: actions/setup-java@v3.1.1
       with:
         java-version: 18
+        distribution: adopt
         cache: gradle
     - name: Run tests
       run: gradle clean test
