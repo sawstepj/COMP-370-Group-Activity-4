@@ -43,6 +43,7 @@ public class MainTest {
                 2
                 1
                 0
+                Time's up!
                 """;
         Main.runTimer(10);
         Thread.sleep(10050);
