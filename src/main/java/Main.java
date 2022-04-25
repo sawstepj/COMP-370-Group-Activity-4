@@ -7,8 +7,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Input the number of seconds: ");
-        int input = keyboard.nextInt();
-        runTimer(input);
+        if (keyboard.hasNextInt()) {
+            int input = keyboard.nextInt();
+            runTimer(input);
+        }
     }
 
     public static void runTimer(int seconds) {

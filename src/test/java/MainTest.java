@@ -1,5 +1,3 @@
-
-
 import java.io.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,6 +16,12 @@ public class MainTest {
     }
 
     @Test
+    public void testMain() throws IOException {
+        Main.main(null);
+        assertEquals("Input the number of seconds: ", outContent.toString());
+    }
+
+    @Test
     public void test1Second() throws InterruptedException {
         String expectedOutput = """
                 1
@@ -26,6 +30,22 @@ public class MainTest {
                 """;
         Main.runTimer(1);
         Thread.sleep(1050);
+        assertEquals(expectedOutput, outContent.toString());
+    }
+
+    @Test
+    public void test5Seconds() throws InterruptedException {
+        String expectedOutput = """
+                5
+                4
+                3
+                2
+                1
+                0
+                Time's up!
+                """;
+        Main.runTimer(5);
+        Thread.sleep(5050);
         assertEquals(expectedOutput, outContent.toString());
     }
 
