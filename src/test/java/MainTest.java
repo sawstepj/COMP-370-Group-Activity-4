@@ -45,7 +45,7 @@ public class MainTest {
                 Time's up!
                 """;
         Main.runTimer(5);
-        Thread.sleep(5000);
+        Thread.sleep(5050);
         assertEquals(expectedOutput, outContent.toString());
     }
 
