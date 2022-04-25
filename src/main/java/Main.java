@@ -6,12 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        int input = 0;
         System.out.print("Input the number of seconds: ");
         if (keyboard.hasNextInt()) {
-            input = keyboard.nextInt();
+            int input = keyboard.nextInt();
+            runTimer(input);
         }
-        runTimer(input);
     }
 
     public static void runTimer(int seconds) {
