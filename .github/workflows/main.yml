@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Java JDK
+      uses: actions/setup-java@v3.1.1
+      with:
+        java-version: 17
+        distribution: adopt
+        cache: gradle
+    - name: Run tests
+      run: gradle clean test
+    - name: Codecov
+      uses: codecov/codecov-action@v3.0.0
+      with:
+        files: jacocoTestReport.xml
+        directory: ./build/reports/jacoco/test/
+      
