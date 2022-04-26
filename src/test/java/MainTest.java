@@ -1,10 +1,14 @@
 import java.io.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.Test;
+import org.junit.runners.RunWith;
+
+
 
 public class MainTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -15,19 +19,34 @@ public class MainTest {
         System.setOut(new PrintStream(outContent));
     }
 
-    @Test
-    public void testMain() throws IOException {
-        Main.main(null);
-        assertEquals("Input the number of seconds: ", outContent.toString());
+    @BeforeEach
+    public void assertNotNull(){
+        /* To test before to make sure object is not null?
+        Main.getInt();
+        assertEquals();
+
+         */
     }
+    /*
+    @ParameterizedTest
+    @ValuesSource(Strings = {"", " "}
+    public void isBlankOrNull(keyboard){
+        Main.userInput();
+        assertTrue(Strings.isBlank(keyboard));
+
+
+     */
 
     @Test
     public void test1Second() throws InterruptedException {
+        //change to int instead of string?
         String expectedOutput = """
                 1
                 0
                 Time's up!
                 """;
+
+
         Main.runTimer(1);
         Thread.sleep(1050);
         assertEquals(expectedOutput, outContent.toString());
