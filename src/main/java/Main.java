@@ -19,7 +19,7 @@ public class Main {
     }
 
     public static void userInput(Scanner keyboard) {
-        //Scanner keyboard = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
         int input = getInt(keyboard);
         //to handle accidental or malicious negative values
         while (input < 0) {
