@@ -36,7 +36,6 @@ public class MainTest {
     }
 
     @Test
-    //the \r is to fix line issues with Windows OS
     public void assertUserInputNegative() throws InterruptedException {
         Main.userInput(new Scanner("-1 2"));
         String expectedOutput = """
