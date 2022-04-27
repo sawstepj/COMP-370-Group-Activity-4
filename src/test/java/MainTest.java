@@ -66,10 +66,7 @@ public class MainTest {
 
     @Test
     public void test0Second() throws InterruptedException {
-        String expectedOutput = """
-                0\r
-                Time's up!\r
-                """;
+        String expectedOutput = """0\nTime's up!\n""";
         Main.runTimer(0);
         Thread.sleep(50);
         assertEquals(expectedOutput, outContent.toString());
