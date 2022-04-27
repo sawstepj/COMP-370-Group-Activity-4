@@ -39,7 +39,7 @@ public class MainTest {
     //the \r is to fix line issues with Windows OS
     public void assertUserInputNegative() throws InterruptedException {
         Main.userInput(new Scanner("-1 2"));
-        String expectedOutput = "Input the number of seconds: Input the number of seconds (>= 0): 2\n1\n0\nTime's up!\n";
+        String expectedOutput = "Input the number of seconds: Input the number of seconds (>= 0): \n2\n1\n0\nTime's up!\n";
         Thread.sleep(2050);
         assertEquals(expectedOutput, outContent.toString());
         
@@ -48,7 +48,7 @@ public class MainTest {
     @Test
     public void assertUserInputNormal() throws InterruptedException {
         Main.userInput(new Scanner("2 3"));
-        String expectedOutput = "Input the number of seconds: 2\r\n1\r\n0\r\nTime's up!\r\n";
+        String expectedOutput = "Input the number of seconds: \r\n2\r\n1\r\n0\r\nTime's up!\r\n";
         Thread.sleep(2050);
         assertEquals(expectedOutput, outContent.toString());
     }
