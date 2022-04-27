@@ -16,6 +16,9 @@ dependencies {
 }
 
 test {
+    testLogging {
+        exceptionFormat = 'full'
+        }
     useJUnitPlatform()
     finalizedBy jacocoTestReport
 }

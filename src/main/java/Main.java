@@ -5,7 +5,7 @@ import java.util.TimerTask;
 public class Main {
 
     public static void main(String[] args) {
-        userInput();
+        userInput(new Scanner (System.in));
     }
 
     public static int getInt(Scanner keyboard){
