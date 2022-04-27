@@ -18,8 +18,10 @@ Unit tests
 Right click on test and chose Run 'Tests in 'COMP_370_Group_Activity_4.test''
 
 Debugs for Windows vs Linux OS
-Tests may need \r or \r\n for example per the following examples
+Tests may need \r or \r\n for example per the following examples:
+
 String expectedOutput = "0\r\nTime's up!\r\n";
+
 String expectedOutput = """
                 5\r
                 4\r
