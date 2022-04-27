@@ -1,14 +1,13 @@
 import java.io.*;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
-
-
-
 
 public class MainTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -20,37 +19,21 @@ public class MainTest {
     }
 
     @Test
-    public void assertGetIntNotNull(){
-        // To test before to make sure object is not null?
-        int answer = Main.getInt(new Scanner("1"));
-        assertEquals(1, answer);
-
-        answer = Main.getInt(new Scanner("-1"));
-        assertEquals(-1, answer);
-
-        answer = Main.getInt(new Scanner("0"));
-        assertEquals(0, answer);
-
-        answer = Main.getInt(new Scanner("zero 1 two"));
-        assertEquals(1, answer);
+    public void testUserInputNormal() throws InterruptedException {
+        Main.userInput(new Scanner("2"));
+        String expectedOutput = "Input the number of seconds (> 0): 2\n1\n0\nTime's up!\n";
+        Thread.sleep(2050);
+        assertEquals(expectedOutput, outContent.toString());
     }
 
     @Test
-    //the \n is to fix next line issues with Linux vs Windows
-    public void assertUserInputNegative() throws InterruptedException {
-        Main.userInput(new Scanner("-1 2"));
-        String expectedOutput = "Input the number of seconds: Input the number of seconds (>= 0): \n2\n1\n0\nTime's up!\n";
-        Thread.sleep(2050);
-        assertEquals(expectedOutput, outContent.toString());
-        
+    public void testUserInputIsNotInt(){
+        assertThrows(NoSuchElementException.class, () -> Main.userInput(new Scanner("test")));
     }
 
     @Test
-    public void assertUserInputNormal() throws InterruptedException {
-        Main.userInput(new Scanner("2 3"));
-        String expectedOutput = "Input the number of seconds: 2\n1\n0\nTime's up!\n";
-        Thread.sleep(2050);
-        assertEquals(expectedOutput, outContent.toString());
+    public void testUserInputNegative() {
+        assertThrows(NoSuchElementException.class, () -> Main.userInput(new Scanner("-1")));
     }
 
     @Test
