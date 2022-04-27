@@ -48,7 +48,7 @@ public class MainTest {
     @Test
     public void assertUserInputNormal() throws InterruptedException {
         Main.userInput(new Scanner("2 3"));
-        String expectedOutput = "Input the number of seconds: 2\r\n1\r\n0\r\nTime's up!\r\n";
+        String expectedOutput = "Input the number of seconds: 2\n1\n0\nTime's up!\n";
         Thread.sleep(2050);
         assertEquals(expectedOutput, outContent.toString());
     }
