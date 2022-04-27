@@ -78,6 +78,7 @@ public class MainTest {
     public void test1Second() throws InterruptedException {
         String expectedOutput = """
                 1\r
+                1\r
                 0\r
                 Time's up!\r
                 """;
