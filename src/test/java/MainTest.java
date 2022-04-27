@@ -36,7 +36,7 @@ public class MainTest {
     }
 
     @Test
-    //the \r is to fix line issues with Windows OS
+    //the \n is to fix next line issues with Linux vs Windows
     public void assertUserInputNegative() throws InterruptedException {
         Main.userInput(new Scanner("-1 2"));
         String expectedOutput = "Input the number of seconds: Input the number of seconds (>= 0): \n2\n1\n0\nTime's up!\n";
