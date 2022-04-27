@@ -40,11 +40,11 @@ public class MainTest {
     public void assertUserInputNegative() throws InterruptedException {
         Main.userInput(new Scanner("-1 2"));
         String expectedOutput = """
-                Input the number of seconds: Input the number of seconds (>= 0): \r
-                2\r
-                1\r
-                0\r
-                Time's up!\r
+                Input the number of seconds: Input the number of seconds (>= 0): 
+                2
+                1
+                0
+                Time's up!
                 """;
         Thread.sleep(2050);
         assertEquals(expectedOutput, outContent.toString());
