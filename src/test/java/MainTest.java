@@ -74,12 +74,7 @@ public class MainTest {
 
     @Test
     public void test1Second() throws InterruptedException {
-        String expectedOutput = """
-                1\r
-                1\r
-                0\r
-                Time's up!\r
-                """;
+        String expectedOutput = "1\n1\n0\nTime's up!\n";
         Main.runTimer(1);
         Thread.sleep(1050);
         assertEquals(expectedOutput, outContent.toString());
@@ -87,15 +82,7 @@ public class MainTest {
 
     @Test
     public void test5Seconds() throws InterruptedException {
-        String expectedOutput = """
-                5\r
-                4\r
-                3\r
-                2\r
-                1\r
-                0\r
-                Time's up!\r
-                """;
+        String expectedOutput = "5\n4\n3\n2\n1\n0\nTime's up!\n";
         Main.runTimer(5);
         Thread.sleep(5050);
         assertEquals(expectedOutput, outContent.toString());
@@ -103,20 +90,7 @@ public class MainTest {
 
     @Test
     public void test10Seconds() throws InterruptedException {
-        String expectedOutput = """
-                10\r
-                9\r
-                8\r
-                7\r
-                6\r
-                5\r
-                4\r
-                3\r
-                2\r
-                1\r
-                0\r
-                Time's up!\r
-                """;
+        String expectedOutput = "10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n0\nTime's up!\n";
         Main.runTimer(10);
         Thread.sleep(10050);
         assertEquals(expectedOutput, outContent.toString());
