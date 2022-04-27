@@ -48,6 +48,7 @@ public class MainTest {
                 """;
         Thread.sleep(2050);
         assertEquals(expectedOutput, outContent.toString());
+        
     }
 
     @Test
