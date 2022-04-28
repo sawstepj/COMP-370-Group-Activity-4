@@ -24,4 +24,3 @@ jobs:
       with:
         files: jacocoTestReport.xml
         directory: ./build/reports/jacoco/test/
-      
