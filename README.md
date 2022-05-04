@@ -1,12 +1,16 @@
 # COMP-370-Group-Activity-4 
 
+In-process:
+
 [![CI](https://github.com/sawstepj/COMP-370-Group-Activity-4/actions/workflows/main.yml/badge.svg)](https://github.com/sawstepj/COMP-370-Group-Activity-4/actions/workflows/main.yml)
 [![codecov](https://codecov.io/gh/sawstepj/COMP-370-Group-Activity-4/branch/main/graph/badge.svg?token=D1GGP9IJJ3)](https://codecov.io/gh/sawstepj/COMP-370-Group-Activity-4)
-[![CodeFactor](https://www.codefactor.io/repository/github/sawstepj/comp-370-group-activity-4/badge)](https://www.codefactor.io/repository/github/sawstepj/comp-370-group-activity-4)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/sawstepj/COMP-370-Group-Activity-4)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/sawstepj/COMP-370-Group-Activity-4)
 ![GitHub issues](https://img.shields.io/github/issues/sawstepj/COMP-370-Group-Activity-4)
 
+Complexity:
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/sawstepj/COMP-370-Group-Activity-4)
+[![CodeFactor](https://www.codefactor.io/repository/github/sawstepj/comp-370-group-activity-4/badge)](https://www.codefactor.io/repository/github/sawstepj/comp-370-group-activity-4)
 
 A simple countdown timer written in Java.
 
